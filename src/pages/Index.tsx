@@ -34,7 +34,7 @@ const products = [
     category: 'bakery',
     price: 1200,
     unit: '1 кг',
-    image: 'https://cdn.poehali.dev/projects/50b02240-049a-43da-8053-74a8af275e8e/files/38d0190d-0f2d-4950-9bf8-77cfc57a0c99.jpg',
+    image: 'https://cdn.poehali.dev/projects/50b02240-049a-43da-8053-74a8af275e8e/files/4fe86597-14a3-4306-a593-4d34b3d7e12e.jpg',
     region: 'Благовещенск',
     inStock: true
   },
@@ -46,7 +46,7 @@ const products = [
     category: 'textiles',
     price: 3500,
     unit: 'шт',
-    image: 'https://cdn.poehali.dev/projects/50b02240-049a-43da-8053-74a8af275e8e/files/a647e039-5ef7-4ccf-a337-91e2b1c1951b.jpg',
+    image: 'https://cdn.poehali.dev/projects/50b02240-049a-43da-8053-74a8af275e8e/files/4dde1850-28ec-4e19-8316-36f57b0ec4cb.jpg',
     region: 'Тында',
     inStock: true
   },
@@ -58,7 +58,7 @@ const products = [
     category: 'preserves',
     price: 850,
     unit: '3 банки',
-    image: 'https://cdn.poehali.dev/projects/50b02240-049a-43da-8053-74a8af275e8e/files/df688ea1-ead5-46e7-b500-a04275bef06e.jpg',
+    image: 'https://cdn.poehali.dev/projects/50b02240-049a-43da-8053-74a8af275e8e/files/06216897-c277-43f7-97ce-df42f7996ed3.jpg',
     region: 'Белогорск',
     inStock: true
   },
@@ -70,7 +70,7 @@ const products = [
     category: 'bakery',
     price: 950,
     unit: '1 кг',
-    image: 'https://cdn.poehali.dev/projects/50b02240-049a-43da-8053-74a8af275e8e/files/38d0190d-0f2d-4950-9bf8-77cfc57a0c99.jpg',
+    image: 'https://cdn.poehali.dev/projects/50b02240-049a-43da-8053-74a8af275e8e/files/33bd16b3-3342-4687-b7aa-d22dbe6f68f7.jpg',
     region: 'Благовещенск',
     inStock: true
   },
@@ -82,7 +82,7 @@ const products = [
     category: 'handmade',
     price: 650,
     unit: 'шт',
-    image: 'https://cdn.poehali.dev/projects/50b02240-049a-43da-8053-74a8af275e8e/files/a647e039-5ef7-4ccf-a337-91e2b1c1951b.jpg',
+    image: 'https://cdn.poehali.dev/projects/50b02240-049a-43da-8053-74a8af275e8e/files/838f080f-47b3-498f-aff6-b24270e72a9a.jpg',
     region: 'Свободный',
     inStock: true
   },
@@ -94,7 +94,7 @@ const products = [
     category: 'honey',
     price: 850,
     unit: '500 г',
-    image: 'https://cdn.poehali.dev/projects/50b02240-049a-43da-8053-74a8af275e8e/files/49f28899-b249-41ca-ac35-0bc6d99ee21b.jpg',
+    image: 'https://cdn.poehali.dev/projects/50b02240-049a-43da-8053-74a8af275e8e/files/9e9abcf4-4037-4964-b2b7-38a562e47b5d.jpg',
     region: 'Благовещенск',
     inStock: true
   },
@@ -106,7 +106,7 @@ const products = [
     category: 'preserves',
     price: 450,
     unit: '0.5 л',
-    image: 'https://cdn.poehali.dev/projects/50b02240-049a-43da-8053-74a8af275e8e/files/df688ea1-ead5-46e7-b500-a04275bef06e.jpg',
+    image: 'https://cdn.poehali.dev/projects/50b02240-049a-43da-8053-74a8af275e8e/files/c3ae2c8f-9390-4d80-ab17-081aade7b2b1.jpg',
     region: 'Белогорск',
     inStock: true
   },
@@ -118,7 +118,7 @@ const products = [
     category: 'crafts',
     price: 1200,
     unit: 'шт',
-    image: 'https://cdn.poehali.dev/projects/50b02240-049a-43da-8053-74a8af275e8e/files/e5b1ff57-4f05-4d78-a255-a8d15930b8b9.jpg',
+    image: 'https://cdn.poehali.dev/projects/50b02240-049a-43da-8053-74a8af275e8e/files/1416d562-edfc-4823-9a8e-08d389b28d79.jpg',
     region: 'Шимановск',
     inStock: true
   },
@@ -130,7 +130,7 @@ const products = [
     category: 'textiles',
     price: 800,
     unit: 'пара',
-    image: 'https://cdn.poehali.dev/projects/50b02240-049a-43da-8053-74a8af275e8e/files/a647e039-5ef7-4ccf-a337-91e2b1c1951b.jpg',
+    image: 'https://cdn.poehali.dev/projects/50b02240-049a-43da-8053-74a8af275e8e/files/1e0b6669-af8e-4c72-9669-6ecb5501d22f.jpg',
     region: 'Тында',
     inStock: true
   }
