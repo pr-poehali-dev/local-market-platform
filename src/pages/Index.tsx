@@ -8,27 +8,90 @@ import Icon from '@/components/ui/icon';
 
 const categories = [
   { id: 'all', name: 'Все категории' },
+  { id: 'bakery', name: 'Домашняя выпечка и кондитерка' },
+  { id: 'handmade', name: 'Рукоделие и handmade' },
+  { id: 'preserves', name: 'Заготовки и консервация' },
   { id: 'honey', name: 'Мёд и продукты пчеловодства' },
-  { id: 'crafts', name: 'Ремесленные изделия' },
   { id: 'vegetables', name: 'Овощи и зелень' },
-  { id: 'dairy', name: 'Молочные продукты' },
-  { id: 'textiles', name: 'Текстиль и одежда' }
+  { id: 'crafts', name: 'Керамика и изделия' },
+  { id: 'textiles', name: 'Вязаные изделия' }
 ];
 
 const producers = [
-  { id: 1, name: 'Пасека "Амурский нектар"', region: 'Благовещенск', rating: 4.9 },
-  { id: 2, name: 'Гончарная мастерская Петровых', region: 'Свободный', rating: 4.8 },
-  { id: 3, name: 'Фермерское хозяйство "Зелёная долина"', region: 'Белогорск', rating: 4.7 },
-  { id: 4, name: 'Молочная ферма "Традиция"', region: 'Тында', rating: 4.9 },
-  { id: 5, name: 'Ткацкая артель', region: 'Шимановск', rating: 4.6 }
+  { id: 1, name: 'Елена Кондитер', region: 'Благовещенск', rating: 4.9, type: 'Самозанятая' },
+  { id: 2, name: 'Мария Рукодельница', region: 'Свободный', rating: 4.8, type: 'Домохозяйка' },
+  { id: 3, name: 'Ольга Домашние заготовки', region: 'Белогорск', rating: 4.9, type: 'Самозанятая' },
+  { id: 4, name: 'Пасека "Амурский нектар"', region: 'Благовещенск', rating: 4.8, type: 'ИП' },
+  { id: 5, name: 'Анна Вязаные изделия', region: 'Тында', rating: 4.7, type: 'Домохозяйка' },
+  { id: 6, name: 'Светлана Керамика', region: 'Шимановск', rating: 4.6, type: 'Самозанятая' }
 ];
 
 const products = [
   {
     id: 1,
+    name: 'Торт "Наполеон" домашний',
+    producer: 'Елена Кондитер',
+    producerId: 1,
+    category: 'bakery',
+    price: 1200,
+    unit: '1 кг',
+    image: 'https://cdn.poehali.dev/projects/50b02240-049a-43da-8053-74a8af275e8e/files/38d0190d-0f2d-4950-9bf8-77cfc57a0c99.jpg',
+    region: 'Благовещенск',
+    inStock: true
+  },
+  {
+    id: 2,
+    name: 'Вязаный плед из шерсти',
+    producer: 'Анна Вязаные изделия',
+    producerId: 5,
+    category: 'textiles',
+    price: 3500,
+    unit: 'шт',
+    image: 'https://cdn.poehali.dev/projects/50b02240-049a-43da-8053-74a8af275e8e/files/a647e039-5ef7-4ccf-a337-91e2b1c1951b.jpg',
+    region: 'Тында',
+    inStock: true
+  },
+  {
+    id: 3,
+    name: 'Набор домашних солений',
+    producer: 'Ольга Домашние заготовки',
+    producerId: 3,
+    category: 'preserves',
+    price: 850,
+    unit: '3 банки',
+    image: 'https://cdn.poehali.dev/projects/50b02240-049a-43da-8053-74a8af275e8e/files/df688ea1-ead5-46e7-b500-a04275bef06e.jpg',
+    region: 'Белогорск',
+    inStock: true
+  },
+  {
+    id: 4,
+    name: 'Медовик со сметанным кремом',
+    producer: 'Елена Кондитер',
+    producerId: 1,
+    category: 'bakery',
+    price: 950,
+    unit: '1 кг',
+    image: 'https://cdn.poehali.dev/projects/50b02240-049a-43da-8053-74a8af275e8e/files/38d0190d-0f2d-4950-9bf8-77cfc57a0c99.jpg',
+    region: 'Благовещенск',
+    inStock: true
+  },
+  {
+    id: 5,
+    name: 'Брошь ручной работы',
+    producer: 'Мария Рукодельница',
+    producerId: 2,
+    category: 'handmade',
+    price: 650,
+    unit: 'шт',
+    image: 'https://cdn.poehali.dev/projects/50b02240-049a-43da-8053-74a8af275e8e/files/a647e039-5ef7-4ccf-a337-91e2b1c1951b.jpg',
+    region: 'Свободный',
+    inStock: true
+  },
+  {
+    id: 6,
     name: 'Таёжный мёд липовый',
     producer: 'Пасека "Амурский нектар"',
-    producerId: 1,
+    producerId: 4,
     category: 'honey',
     price: 850,
     unit: '500 г',
@@ -37,63 +100,39 @@ const products = [
     inStock: true
   },
   {
-    id: 2,
-    name: 'Керамическая тарелка ручной работы',
-    producer: 'Гончарная мастерская Петровых',
-    producerId: 2,
+    id: 7,
+    name: 'Варенье из амурской клубники',
+    producer: 'Ольга Домашние заготовки',
+    producerId: 3,
+    category: 'preserves',
+    price: 450,
+    unit: '0.5 л',
+    image: 'https://cdn.poehali.dev/projects/50b02240-049a-43da-8053-74a8af275e8e/files/df688ea1-ead5-46e7-b500-a04275bef06e.jpg',
+    region: 'Белогорск',
+    inStock: true
+  },
+  {
+    id: 8,
+    name: 'Керамическая тарелка с росписью',
+    producer: 'Светлана Керамика',
+    producerId: 6,
     category: 'crafts',
     price: 1200,
     unit: 'шт',
     image: 'https://cdn.poehali.dev/projects/50b02240-049a-43da-8053-74a8af275e8e/files/e5b1ff57-4f05-4d78-a255-a8d15930b8b9.jpg',
-    region: 'Свободный',
+    region: 'Шимановск',
     inStock: true
   },
   {
-    id: 3,
-    name: 'Набор органических овощей',
-    producer: 'Фермерское хозяйство "Зелёная долина"',
-    producerId: 3,
-    category: 'vegetables',
-    price: 650,
-    unit: '2 кг',
-    image: 'https://cdn.poehali.dev/projects/50b02240-049a-43da-8053-74a8af275e8e/files/2a89716b-a7f1-4cd6-a6a8-96f740e25549.jpg',
-    region: 'Белогорск',
-    inStock: true
-  },
-  {
-    id: 4,
-    name: 'Гречишный мёд',
-    producer: 'Пасека "Амурский нектар"',
-    producerId: 1,
-    category: 'honey',
-    price: 950,
-    unit: '500 г',
-    image: 'https://cdn.poehali.dev/projects/50b02240-049a-43da-8053-74a8af275e8e/files/49f28899-b249-41ca-ac35-0bc6d99ee21b.jpg',
-    region: 'Благовещенск',
-    inStock: true
-  },
-  {
-    id: 5,
-    name: 'Керамическая чаша',
-    producer: 'Гончарная мастерская Петровых',
-    producerId: 2,
-    category: 'crafts',
+    id: 9,
+    name: 'Набор вязаных варежек',
+    producer: 'Анна Вязаные изделия',
+    producerId: 5,
+    category: 'textiles',
     price: 800,
-    unit: 'шт',
-    image: 'https://cdn.poehali.dev/projects/50b02240-049a-43da-8053-74a8af275e8e/files/e5b1ff57-4f05-4d78-a255-a8d15930b8b9.jpg',
-    region: 'Свободный',
-    inStock: true
-  },
-  {
-    id: 6,
-    name: 'Сезонная зелень',
-    producer: 'Фермерское хозяйство "Зелёная долина"',
-    producerId: 3,
-    category: 'vegetables',
-    price: 250,
-    unit: 'пучок',
-    image: 'https://cdn.poehali.dev/projects/50b02240-049a-43da-8053-74a8af275e8e/files/2a89716b-a7f1-4cd6-a6a8-96f740e25549.jpg',
-    region: 'Белогорск',
+    unit: 'пара',
+    image: 'https://cdn.poehali.dev/projects/50b02240-049a-43da-8053-74a8af275e8e/files/a647e039-5ef7-4ccf-a337-91e2b1c1951b.jpg',
+    region: 'Тында',
     inStock: true
   }
 ];
@@ -101,17 +140,24 @@ const products = [
 const articles = [
   {
     id: 1,
-    title: 'История амурского пчеловодства',
-    excerpt: 'Традиции производства мёда в Амурской области насчитывают более 150 лет',
+    title: 'История Елены: от хобби к бизнесу',
+    excerpt: 'Как домохозяйка из Благовещенска открыла домашнюю кондитерскую и зарабатывает на любимом деле',
     date: '15 декабря 2024',
-    image: 'https://cdn.poehali.dev/projects/50b02240-049a-43da-8053-74a8af275e8e/files/49f28899-b249-41ca-ac35-0bc6d99ee21b.jpg'
+    image: 'https://cdn.poehali.dev/projects/50b02240-049a-43da-8053-74a8af275e8e/files/38d0190d-0f2d-4950-9bf8-77cfc57a0c99.jpg'
   },
   {
     id: 2,
-    title: 'Мастера гончарного дела',
-    excerpt: 'Как семейная мастерская сохраняет древние традиции керамики',
+    title: 'Рукоделие как источник дохода',
+    excerpt: 'Самозанятые мастерицы Амурской области делятся опытом продажи handmade изделий',
     date: '10 декабря 2024',
-    image: 'https://cdn.poehali.dev/projects/50b02240-049a-43da-8053-74a8af275e8e/files/e5b1ff57-4f05-4d78-a255-a8d15930b8b9.jpg'
+    image: 'https://cdn.poehali.dev/projects/50b02240-049a-43da-8053-74a8af275e8e/files/a647e039-5ef7-4ccf-a337-91e2b1c1951b.jpg'
+  },
+  {
+    id: 3,
+    title: 'Домашние заготовки: традиции и современность',
+    excerpt: 'Почему покупатели выбирают консервацию от местных производителей',
+    date: '5 декабря 2024',
+    image: 'https://cdn.poehali.dev/projects/50b02240-049a-43da-8053-74a8af275e8e/files/df688ea1-ead5-46e7-b500-a04275bef06e.jpg'
   }
 ];
 
@@ -167,11 +213,11 @@ export default function Index() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center animate-fade-in">
             <h2 className="text-5xl font-bold text-primary mb-6">
-              Поддержите местных производителей
+              Поддержите самозанятых и домашних мастеров
             </h2>
             <p className="text-xl text-muted-foreground mb-8">
-              Свежие продукты и уникальные товары от малых производителей Амурской области. 
-              Прямая связь с фермерами и ремесленниками вашего региона.
+              Домашняя выпечка, рукоделие, заготовки от домохозяек и самозанятых Амурской области. 
+              Уникальные товары с душой — прямо от мастера к вам домой.
             </p>
             <Button size="lg" className="bg-accent hover:bg-accent/90 text-white">
               <Icon name="ArrowDown" size={20} className="mr-2" />
@@ -296,8 +342,8 @@ export default function Index() {
                   <div>
                     <h3 className="font-semibold text-xl mb-2">Наша миссия</h3>
                     <p className="text-muted-foreground">
-                      Объединить малых производителей Амурской области с покупателями, 
-                      поддержать местную экономику и сохранить традиции региона.
+                      Помочь самозанятым, домохозяйкам и домашним мастерам зарабатывать на любимом деле, 
+                      продавая свои товары напрямую покупателям Амурской области.
                     </p>
                   </div>
                 </div>
@@ -309,10 +355,10 @@ export default function Index() {
                     <Icon name="Users" size={32} className="text-accent" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-xl mb-2">Для производителей</h3>
+                    <h3 className="font-semibold text-xl mb-2">Для самозанятых и мастеров</h3>
                     <p className="text-muted-foreground">
-                      Создайте личный кабинет, управляйте товарами, получайте заказы 
-                      и развивайте свой бизнес с поддержкой платформы.
+                      Выпекаете торты? Вяжете? Делаете заготовки? Регистрируйтесь, 
+                      добавляйте товары и получайте заказы от местных покупателей.
                     </p>
                   </div>
                 </div>
@@ -326,8 +372,8 @@ export default function Index() {
                   <div>
                     <h3 className="font-semibold text-xl mb-2">Для покупателей</h3>
                     <p className="text-muted-foreground">
-                      Покупайте свежие натуральные продукты и уникальные товары напрямую 
-                      у производителей с доставкой по Амурской области.
+                      Покупайте свежую выпечку, handmade изделия и домашние заготовки 
+                      напрямую у мастеров. Товары с душой и доставкой по области.
                     </p>
                   </div>
                 </div>
@@ -350,14 +396,14 @@ export default function Index() {
             </div>
 
             <div className="bg-gradient-to-r from-primary to-secondary p-8 rounded-xl text-white text-center">
-              <h3 className="text-2xl font-bold mb-4">Станьте частью локального рынка</h3>
+              <h3 className="text-2xl font-bold mb-4">Начните продавать или покупать сегодня</h3>
               <p className="mb-6 opacity-90">
-                Регистрируйтесь как производитель или покупатель и получите доступ к личному кабинету
+                Регистрация бесплатная. Личный кабинет с историей заказов и управлением товарами.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" variant="secondary">
                   <Icon name="UserPlus" size={20} className="mr-2" />
-                  Я производитель
+                  Я мастер / самозанятый
                 </Button>
                 <Button size="lg" variant="outline" className="bg-white text-primary hover:bg-white/90">
                   <Icon name="User" size={20} className="mr-2" />
@@ -371,9 +417,9 @@ export default function Index() {
 
       <section id="articles" className="py-16 bg-background">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-primary mb-4 text-center">Статьи и истории</h2>
+          <h2 className="text-4xl font-bold text-primary mb-4 text-center">Истории успеха</h2>
           <p className="text-center text-muted-foreground mb-12">
-            Узнайте больше о местных производителях и традициях Амурской области
+            Как самозанятые и домохозяйки Амурской области превращают хобби в доход
           </p>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
